@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KEDARSAMOT | Tech & Gear & Components</title>
+    <title>KEDARSAMOT | Tech & Hardware Database</title>
     <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+        :root{
+            --background-color: #FCFCFC;
+            --background-secondary-color: #f0f0f0;
+            --text-color: #101828;
+            --cta-main-color: #30D083;
+            --cta-secondary-color: #259F64;
+        }
         *{
             box-sizing: border-box;
             margin: 0;
@@ -14,29 +21,58 @@
         }
         body{
             font-family: "Zalando Sans Expanded", sans-serif;
+            background-color: var(--background-secondary-color);
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            padding: 10px;
         }
-
+        main{
+            max-width: 500px;
+            width: 100%;
+            padding: 32px;
+            background-color: var(--background-color);
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 25px;
+            text-align: center;
+        }
+        .logo{
+            color: var(--text-color);
+            font-size: 84px;
+        }
+        h1{
+            color: var(--text-color);
+        }
+        .tagline{
+            padding: 1.25rem 0;
+        }
     </style>
 </head>
 <body>
-    <section class="container">
-        <i class='bx  bxs-brain-circuit'></i> 
-        <h1>KEDARSAMOT</h1>
-        <p class="tagline">Tech Stack & Hardware Database</p>
-        <nav class="links">
-            <div class="section-title">
-                <i class='bx  bxs-user-circle'></i>TheNemessiS
-            </div>
-            <a href="thenemessis/" class="btn">
-                <span><i class='bx  bxs-desktop'></i>Setup & Components</span>
-            </a>
-            <div class="section-title">
-                <i class='bx  bxs-user-circle'></i>SeddY
-            </div>
-            <a href="seddy/" class="btn">
-                <span><i class='bx  bxs-desktop'></i>Setup & Components</span>
-            </a>
-        </nav>
-    </section>
+    <main>
+        <section class="container">
+            <i class='logo  bx  bxs-brain-circuit'></i> 
+            <h1>KEDARSAMOT</h1>
+            <p class="tagline">Tech & Hardware Database</p>
+            <nav class="links">
+                <div class="section-title">
+                    <i class='bx  bxs-user-circle'></i>TheNemessiS
+                </div>
+                <a href="thenemessis/" class="btn">
+                    <span><i class='bx  bxs-desktop'></i>Setup & Components</span>
+                </a>
+                <div class="section-title">
+                    <i class='bx  bxs-user-circle'></i>SeddY
+                </div>
+                <a href="seddy/" class="btn">
+                    <span><i class='bx  bxs-desktop'></i>Setup & Components</span>
+                </a>
+            </nav>
+        </section>
+        <footer><a href="https://www.sedlaktomas.me/">Created by Tomáš Sedlák</a></footer>
+    </main>
 </body>
 </html>
