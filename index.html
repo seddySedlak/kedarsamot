@@ -27,11 +27,12 @@
             justify-content: center;
             height: 100vh;
             padding: 10px;
+            color: var(--text-color);
         }
         main{
             max-width: 500px;
             width: 100%;
-            padding: 32px;
+            padding: 2rem;
             background-color: var(--background-color);
             display: flex;
             justify-content: space-between;
@@ -39,6 +40,11 @@
             align-items: center;
             border-radius: 25px;
             text-align: center;
+            box-shadow: rgba(255, 255, 255, 0.19) 0px 1px 2px 0px inset, rgba(0, 0, 0, 0.19) 0px 1px 2px 0px, rgba(0, 0, 0, 0.082) 0px 2px 4px 0px;
+            /* border: 1px solid var(--text-color); */
+        }
+        .container{
+            width: 100%;
         }
         .logo{
             color: var(--text-color);
@@ -48,15 +54,30 @@
             color: var(--text-color);
         }
         .tagline{
-            padding: 1.25rem 0;
+            padding: 3rem 0;
         }
         .links{
             display: flex;
             flex-direction: column;
             gap: 1rem;
         }
+        .section-title, .btn{
+            text-align: center;
+        }
         .section-title{
             text-align: left;
+        }
+        .section-title span{
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+        .section-title i{
+            font-size: 1.25rem;
+            transition: .1s ease-in-out;
+        }
+        .section-title i:hover{
+            color: var(--cta-main-color);
         }
         .btn{
             background-color: var(--cta-main-color);
@@ -65,20 +86,34 @@
             padding: 1rem 2rem;
             width: 100%;
             border-radius: 15px;
-            border: 2px solid var(--cta-secondary-color);
-            transition: .1s ease-in-out;
+            border: solid 4px transparent;
+            transition: .2s ease-in-out;
+            /* box-shadow: rgba(255, 255, 255, 0.19) 0px 1px 2px 0px inset, rgba(0, 0, 0, 0.19) 0px 1px 2px 0px, rgba(0, 0, 0, 0.082) 0px 2px 4px 0px; */
+            display: flex;
+            justify-content: center;
+            background-clip: padding-box;
         }
         .btn:hover{
-            background-color: var(--cta-hover-color);
+            background-color: var(--cta-main-color);
+            box-shadow: 0px 0px 0px 2px var(--cta-main-color);
         }
         .btn span{
             display: flex;
             align-items: center;
             font-size: 1.1rem;
+            gap: .5rem;
         }
         .btn i{
-            padding-right: .5rem;
             font-size: 1.5rem;
+        }
+        footer a{
+            text-decoration: none;
+            color: var(--cta-main-color);
+            transition: .2s ease-in-out;
+            font-weight: 500;
+        }
+        footer a:hover{
+            color: var(--cta-secondary-color);
         }
     </style>
 </head>
@@ -90,20 +125,20 @@
             <p class="tagline">Tech & Hardware Database</p>
             <nav class="links">
                 <div class="section-title">
-                    <i class='bx  bxs-user-circle'></i>TheNemessiS
+                    <span><i class='bx  bxs-user-circle'></i>TheNemessiS</span>
                 </div>
                 <a href="thenemessis/" class="btn">
                     <span><i class='bx  bxs-desktop'></i>Setup & Components</span>
                 </a>
                 <div class="section-title">
-                    <i class='bx  bxs-user-circle'></i>SeddY
+                    <span><i class='bx  bxs-user-circle'></i>SeddY</span>
                 </div>
                 <a href="seddy/" class="btn">
                     <span><i class='bx  bxs-desktop'></i>Setup & Components</span>
                 </a>
             </nav>
         </section>
-        <footer><a href="https://www.sedlaktomas.me/">Created by Tomáš Sedlák</a></footer>
+        <footer>Created by <a href="https://www.sedlaktomas.me/">Tomáš Sedlák</a></footer>
     </main>
 </body>
 </html>
